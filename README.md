@@ -45,11 +45,16 @@ Next.js 시작
        8. style에 객체 넣으면 안됨! 최적화에 문제가 생김
        {} === {} : false
        이유는 React JS는 virtual Dom으로 달라진 부분을 리랜더링을 한다.
-       객체를 넣게 되는 경우 false로 판단하여 계속 리랜더링 된다.
-       방법 1. style-component를 사용하여
-           2.
-       9. useCallback 함수콜백 - useMeno 값콜백       
-       
+       객체를 넣게 되는 경우 계속 리랜더링 된다.
+       방법 1. style-component를 사용
+           2. useMemo를 사용
+       9. [useCallback 함수콜백], [useMeno 값콜백]
+       10. return 부분을 최소화하여 virtual Dom 역할을 최소화하는것이 맞다고 생각하는데 맞나??
+           최소화 하기위해 component로 나누는거고 스타일객체도 사용안하는거 같은데...
+           리액트의 장점을 살리기 위해...
+           더 공부
+           
+---           
        
        
        
