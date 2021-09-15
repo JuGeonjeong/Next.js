@@ -39,8 +39,16 @@ Next.js 시작
        3. npm run dev : dev의 value실행
        4. 서버가 돌아가고 있을때 페이지를 새로 만들었으면 서버 재시작
        5. npm trends 사이트에서 사용량 비교 후 사용
-       6. 
-       
+       6. 모든페이지에서 공통적인 부분은 _app.js같은 파일을 만들어 준다. pages의 공통 부모
+       7. 디자인은 모바일 -> 태블릿 -> 데스크탑 순으로 만든다. 
+       xs:모바일, sm:태블릿, md:작은데스크탑 ex) <Col xs={24} md={6}> 24등분 중 얼마
+       8. style에 객체 넣으면 안됨! 최적화에 문제가 생김
+       {} === {} : false
+       이유는 React JS는 virtual Dom으로 달라진 부분을 리랜더링을 한다.
+       객체를 넣게 되는 경우 false로 판단하여 계속 리랜더링 된다.
+       방법 1. style-component를 사용하여
+           2.
+       9. useCallback 함수콜백 - useMeno 값콜백       
        
        
        
