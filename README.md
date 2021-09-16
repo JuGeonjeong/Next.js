@@ -1,4 +1,4 @@
-# Next.js 
+# Next.js 시작
 Next.js 시작
 # [0915]
 ## [인프런]React로 NodeBird SNS만들기(1일차)
