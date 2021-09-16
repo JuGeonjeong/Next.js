@@ -55,7 +55,7 @@ Next.js 시작
        방법 1. style-component를 사용
            2. useMemo를 사용
            
-       9. [useCallback 함수콜백], [useMeno 값콜백]
+       9. [useCallback 함수콜백], [useMemo 값콜백]
        
        10. return 부분을 최소화하여 virtual Dom 역할을 최소화하는것이 맞다고 생각하는데 맞나??
            최소화 하기위해 component로 나누는거고 스타일객체도 사용안하는거 같은데...
