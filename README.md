@@ -93,7 +93,9 @@ Next.js 시작
 >       4. 중앙저장소 데이터 수정원리
 >          중앙저장소 -> ACTION ->REDUCER
 >          action 가상저장소, ACTION의 type과 data를 Dispath해서 reducer에 넘겨준다. 
->          reducer에서 변경 후 중앙저장소로 넘겨준다.
+>          reducer에서 변경 후 중앙저장소로 넘겨준다.'
+>        
+>        https://github.com/kirill-konshin/next-redux-wrapper
        
 ---       
        
