@@ -68,9 +68,31 @@ Next.js 시작
 ## [인프런]React로 NodeBird SNS만들기(2일차)
 ### 1. 쭉쭉쭉 코드 따라하기
 ### 2. 의문점
+#### ServerSideRendering, ClientSideRendering - 동작원리
+#### Next JS rhdbehdwkrdnjsfl
+#### CodeSpliting 순서도와 흐름
+### 3. 메모
+       1. 배열로 JSX 사용시 key 값을 넣어야 됨.
+          ... target="_blank" rel="noreferrer nopener" />
+              noreferrer: 이전, nopener: 누가 열었는지 -> 이 둘을 정보를 없애줌/정보의 위협이 됨
+              
+       2. E-CHART, ANT-D
        
+       3. Next JS에 Redux 붙이기 npx i redux, npx i next-redux-wrapper 오류시 + --force/ @6(version)
+          Redux란? 중앙저장소역할
+          - 회원정보처럼 여러 컴포넌트에서 공통으로 쓰는 데이터가 있고 컴포넌트가 분리되어 있으면 데이터들도 흩어져 있다.
+          이 흩어진 데이터들을 하나의 부모컴포넌트로 만들고 자식컴포넌트로 매번 수동으로 뿌려주는 귀찮은 과정을 거치기 때문에
+          중앙에서 하나로 관리를하여 컴포넌트에 뿌려주는 역할.
+          
+          종류: React 3가지 
+          context.api : Redux와 Mobex랑 비동기시 차이가 있다. 실패시 성공 실패 모든경우를 다 봐야한다. 실패시 코드가 Redux와 비슷하다고 한다.
+          Redux : 코드의 원리가 간단하다. 보기좋고 추적 가능하기 때문에 안정적이다. 코드가 길어진다. -> 입문자가 사용하기 좋다.
+          Mobex : 비교적 어려운 코드 -> 코드량은 줄지만 실수시 추적어려움 -> Redux가 능숙해진 후 사용, 경험자가 사용하기 좋다고 한다.
+          
+       4. 중앙저장소 데이터 수정원리
+          중앙저장소 -> ACTION ->REDUCER
+          action 가상저장소, ACTION의 type과 data를 Dispath해서 reducer에 넘겨준다. 
+          reducer에서 변경 후 중앙저장소로 넘겨준다.
        
-       
-       
-       
+---       
        
