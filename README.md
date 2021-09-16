@@ -34,20 +34,29 @@ Next.js 시작
 ### 3. 메모
        1. pages 폴더는 무조건 이름이 pages이어야 한다. 
        Next JS가 이름을 인식하고 개별적인 페이지로 CodeSpliting된 PageComponent로 만들어 준다.
+       
        2. 에러메세지 무조건 번역해보기
+       
        3. npm run dev : dev의 value실행
+       
        4. 서버가 돌아가고 있을때 페이지를 새로 만들었으면 서버 재시작
+       
        5. npm trends 사이트에서 사용량 비교 후 사용
+       
        6. 모든페이지에서 공통적인 부분은 _app.js같은 파일을 만들어 준다. pages의 공통 부모
+       
        7. 디자인은 모바일 -> 태블릿 -> 데스크탑 순으로 만든다. 
        xs:모바일, sm:태블릿, md:작은데스크탑 ex) <Col xs={24} md={6}> 24등분 중 얼마
+       
        8. style에 객체 넣으면 안됨! 최적화에 문제가 생김
        {} === {} : false
        이유는 React JS는 virtual Dom으로 달라진 부분을 리랜더링을 한다.
        객체를 넣게 되는 경우 계속 리랜더링 된다.
        방법 1. style-component를 사용
            2. useMemo를 사용
+           
        9. [useCallback 함수콜백], [useMeno 값콜백]
+       
        10. return 부분을 최소화하여 virtual Dom 역할을 최소화하는것이 맞다고 생각하는데 맞나??
            최소화 하기위해 component로 나누는거고 스타일객체도 사용안하는거 같은데...
            리액트의 장점을 살리기 위해...
