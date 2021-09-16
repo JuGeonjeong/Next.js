@@ -32,7 +32,6 @@ Next.js 시작
        하지만 ServerSideRendering, CodeSpliting는 Nect JS뿐 아니라 React JS도 구현 가능하다.
 
 ### 3. 메모
-#### pages 폴더
        1. pages 폴더는 무조건 이름이 pages이어야 한다. 
        Next JS가 이름을 인식하고 개별적인 페이지로 CodeSpliting된 PageComponent로 만들어 준다.
        2. 에러메세지 무조건 번역해보기
