@@ -74,7 +74,7 @@ Next.js 시작
 #### CodeSpliting 순서도와 흐름
 ### 3. 메모
 >       1. 배열로 JSX 사용시 key 값을 넣어야 됨.
->          ... target="_blank" rel="noreferrer nopener" />
+>          ... target="_blank" rel="noreferrer noopener" />
 >              noreferrer: 이전, nopener: 누가 열었는지 -> 이 둘을 정보를 없애줌/정보의 위협이 됨
 >              
 >       2. E-CHART, ANT-D
