@@ -4,6 +4,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import useInput from "../hooks/useInput";
+import { useDispatch } from "react-redux";
+import { loginAction } from "../reducers";
 
 const ButtonWrapper = styled.div`
       margin-top: 10px;
@@ -13,6 +15,7 @@ const FormWrapper = styled(Form)`
 `;
 
 const LoginForm = ({ setIsLoggedIn }) => {
+    const dispatch = useDispatch();
     const [id, onChangeId] = useInput(''); // hooks 중복시 다른파일로 밑에 생략 가능
     const [password, onChangePassword] = useInput('');
 
@@ -30,7 +33,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
 
     const onSubmitForm = useCallback(() => {
         console.log(id, password);
-        setIsLoggedIn(true);
+        dispatch(loginAction({ id, password }));
     }, [id, password])
 
     return (
