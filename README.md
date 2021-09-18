@@ -98,4 +98,7 @@ Next.js 시작
 >        https://github.com/kirill-konshin/next-redux-wrapper
        
 ---       
+
+# 0917
+#### 추석&복습 조금
        
