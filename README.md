@@ -70,7 +70,7 @@ Next.js 시작
 ### 1. 쭉쭉쭉 코드 따라하기
 ### 2. 의문점
 #### ServerSideRendering, ClientSideRendering - 동작원리
-#### Next JS rhdbehdwkrdnjsfl
+#### Next JS 고유동작원리
 #### CodeSpliting 순서도와 흐름
 ### 3. 메모
 >       1. 배열로 JSX 사용시 key 값을 넣어야 됨.
@@ -103,4 +103,22 @@ Next.js 시작
 #### 추석&복습
         
 ---
+# 0923
+## [인프런]React로 NodeBird SNS만들기(3일차)
+### 1. 쭉쭉쭉 코드 따라하기
+### 2. 의문점
+#### npm 명령어
+### 3. 메모
+        1. reducer쪼개기
+           export파일 불러오고 combineReducers
+        2. react-slick 사용
+           여러이미지 더보기, ...
+        3. 글로벌 스타일과 컴포넌트 파일구조
+           import styled, { createGlobalStyle } from "styled-components";
         
+                export const Global = createGlobalStyle`
+                     .slick-slide {
+                             display: inline-block;
+                     }
+                `;
+           스타일파일 분류 후 export후 다중사용가능
