@@ -1,11 +1,12 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useCallback } from 'react';
 import { Form, Input, Button } from 'antd';
 import Link from 'next/link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import useInput from "../hooks/useInput";
+
 import { useDispatch } from "react-redux";
-import { loginAction } from "../reducers";
+import { loginAction } from "../reducers/user";
 
 const ButtonWrapper = styled.div`
       margin-top: 10px;
@@ -14,22 +15,10 @@ const FormWrapper = styled(Form)`
       padding: 10px;
 `;
 
-const LoginForm = ({ setIsLoggedIn }) => {
+const LoginForm = () => {
     const dispatch = useDispatch();
     const [id, onChangeId] = useInput(''); // hooks 중복시 다른파일로 밑에 생략 가능
     const [password, onChangePassword] = useInput('');
-
-    /* const [id, setId] = useState('');
-       const [password, setPassword] = useState('');
-
-
-     const onChangeId = useCallback((e) => {
-         setId(e.target.value);
-     }, []);
-
-    const onChangePassword = useCallback((e) => {
-        setPassword(e.target.value);
-    }, []);*/
 
     const onSubmitForm = useCallback(() => {
         console.log(id, password);
@@ -60,10 +49,6 @@ const LoginForm = ({ setIsLoggedIn }) => {
             </ButtonWrapper>
         </FormWrapper>
     )
-}
-
-LoginForm.PropTypes = {
-    setIsLoggedIn: PropTypes.func.isRequired,
 }
 
 export default LoginForm;
