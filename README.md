@@ -121,4 +121,5 @@ Next.js 시작
                              display: inline-block;
                      }
                 `;
+           JSX부분에 <Global /> 전체에 작용.
            스타일파일 분류 후 export후 다중사용가능
