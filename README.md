@@ -138,7 +138,7 @@ Next.js 시작
 ---
         
 # 0926
-## [인프런]React로 NodeBird SNS만들기(4일차)
+## [인프런]React로 NodeBird SNS만들기(5일차)
 ### 1. 쭉쭉쭉 코드 따라하기
 ### 2. 의문점
 #### 
