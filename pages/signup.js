@@ -6,13 +6,18 @@ import PropTypes from 'prop-types';
 
 import AppLayout from "../components/AppLayout";
 import useInput from "../hooks/useInput";
+import {SIGN_UP_REQUEST} from "../reducers/user";
+import {useDispatch, useSelector} from "react-redux";
 
 const ErrorMessage = styled.div`
   color: red;
 `
 
 const Signup = () => {
-    const [id, onChangeId] = useInput(''); // hooks 중복시 다른파일로 밑에 생략 가능
+    const dispatch = useDispatch();
+    const { signUpLoading } = useSelector((state) => state.user);
+
+    const [email, onChangeEmail] = useInput(''); // hooks 중복시 다른파일로 밑에 생략 가능
     const [nickname, onChangeNickname] = useInput('');
     const [password, onChangePassword] = useInput('');
 
@@ -37,7 +42,11 @@ const Signup = () => {
         if (!term) {
             return setTermError(true);
         }
-        console.log(id, nickname, password);
+        console.log(email, nickname, password);
+        dispatch({
+            type: SIGN_UP_REQUEST,
+            data: { email, password, nickname },
+        })
     }, [password, passwordCheck, term]);
 
     return (
@@ -47,9 +56,9 @@ const Signup = () => {
         </Head>
         <Form onFinish={onSubmit}>
             <div>
-                <label htmlFor="user-id">아이디</label>
+                <label htmlFor="user-email">이메</label>
                 <br/>
-                <Input name="user-id" value={id} required onChange={onChangeId} />
+                <Input name="user-email" type="email" value={email} required onChange={onChangeEmail} />
             </div>
             <div>
                 <label htmlFor="user-nick">닉네임</label>
@@ -78,7 +87,7 @@ const Signup = () => {
                 {termError && <ErrorMessage>약관에 동의하셔야 합니다.</ErrorMessage>}
             </div>
             <div style={{ marginTop: 10 }}>
-                <Button type="primary"  htmlType="submit">가입하기</Button>
+                <Button type="primary"  htmlType="submit" loading={signUpLoading}>가입하기</Button>
             </div>
         </Form>
         </AppLayout>
