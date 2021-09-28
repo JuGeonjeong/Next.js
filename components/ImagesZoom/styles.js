@@ -1,5 +1,14 @@
-import styled, { createGlobalStyle } from "styled-components";
-import { CloseOutlined } from "@ant-design/icons";
+import styled, { createGlobalStyle } from 'styled-components';
+import { CloseOutlined } from '@ant-design/icons';
+
+export const Global = createGlobalStyle`
+  .slick-slide {
+    display: inline-block;
+  }
+  .ant-card-cover {
+    transform: none !important;
+  }
+`;
 
 export const Overlay = styled.div`
   position: fixed;
@@ -16,13 +25,18 @@ export const Header = styled.header`
   position: relative;
   padding: 0;
   text-align: center;
-    
-    & h1 {
-      margin: 0;
-      font-size: 17px;
-      color: #333;
-      line-height: 44px;
-    }
+
+  & h1 {
+    margin: 0;
+    font-size: 17px;
+    color: #333;
+    line-height: 44px;
+  }
+`;
+
+export const SlickWrapper = styled.div`
+  height: calc(100% - 44px);
+  background: #090909;
 `;
 
 export const CloseBtn = styled(CloseOutlined)`
@@ -32,29 +46,14 @@ export const CloseBtn = styled(CloseOutlined)`
   padding: 15px;
   line-height: 14px;
   cursor: pointer;
-`
-
-export const SlickWrapper = styled.div`
-  height: calc(100% - 44px);
-  background: black;
-`;
-
-export const ImgWrapper = styled.div`
-  padding: 32px;
-  text-align: center;
-  
-  & img {
-    margin: 0 auto;
-    max-height: 750px;
-  }
 `;
 
 export const Indicator = styled.div`
   text-align: center;
-  
+
   & > div {
     width: 75px;
-    heigth: 30px;
+    height: 30px;
     line-height: 30px;
     border-radius: 15px;
     background: #313131;
@@ -65,8 +64,12 @@ export const Indicator = styled.div`
   }
 `;
 
-export const Global = createGlobalStyle`
-  .slick-slide {
-    display: inline-block;
+export const ImgWrapper = styled.div`
+  padding: 32px;
+  text-align: center;
+
+  & img {
+    margin: 0 auto;
+    max-height: 750px;
   }
 `;

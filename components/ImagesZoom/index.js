@@ -1,23 +1,23 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Slick from 'react-slick';
-
-import { Overlay, Global, Header, CloseBtn, ImgWrapper, Indicator, SlickWrapper } from './styles'
+import { Overlay, Header, CloseBtn, SlickWrapper, ImgWrapper, Indicator, Global } from './styles';
 
 const ImagesZoom = ({ images, onClose }) => {
-    const [ currentSlide, setCurrentSlide ] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
+
     return (
         <Overlay>
             <Global />
             <Header>
                 <h1>상세 이미지</h1>
-                <CloseBtn onClick={onClose}>X</CloseBtn>
+                <CloseBtn onClick={onClose} />
             </Header>
             <SlickWrapper>
                 <div>
                     <Slick
                         initialSlide={0}
-                        beforeChange={(slide) => setCurrentSlide(slide)} // afterChange:바뀌는속도(?)
+                        beforeChange={(slide, newSlide) => setCurrentSlide(newSlide)}
                         infinite
                         arrows={false}
                         slidesToShow={1}
@@ -41,10 +41,12 @@ const ImagesZoom = ({ images, onClose }) => {
             </SlickWrapper>
         </Overlay>
     );
-}
+};
 
 ImagesZoom.propTypes = {
-    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+    images: PropTypes.arrayOf(PropTypes.shape({
+        src: PropTypes.string,
+    })).isRequired,
     onClose: PropTypes.func.isRequired,
 };
 
