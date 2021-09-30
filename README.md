@@ -189,7 +189,8 @@ Next.js 시작
 #### 
 ### 3. 메모
         1. MySQL 다운 중 mac OS 버전미달로 설치 실패 -> 해결
-        2. <img width="1041" alt="스크린샷 2021-09-30 오후 8 07 27" src="https://user-images.githubusercontent.com/81910342/135444398-9d097c2d-b12c-4604-a564-15f4abf756d6.png">
+        2. 
+        <img width="1041" alt="스크린샷 2021-09-30 오후 8 07 27" src="https://user-images.githubusercontent.com/81910342/135444398-9d097c2d-b12c-4604-a564-15f4abf756d6.png">
         버전 8.22버전으로 다운 후 정상실행
         3. 
 
