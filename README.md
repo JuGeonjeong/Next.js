@@ -190,5 +190,16 @@ Next.js 시작
 ### 3. 메모
         1. MySQL 다운 중 mac OS 버전미달로 설치 실패 -> 해결
         2. 예기치 않은 오류로 mySQL 종료현상 -> 버전 8.22버전으로 다운 후 정상실행
-        3. 
-
+        3. npm i sequelize-cli mysql2 : node와 mysql 연결해주는 드라이버 설치
+        4. 테이블 관계
+        n : 1 = hasMany : belongsTo
+        n : n = hasMany : hasMany -> 테이블 간의 테이블이 하나생김
+        1 : 1 = hasOne : hasOne
+        ex) 유저정보 : 유저 = hasOne : belongsTo
+        같은 테이블에서도 중간 테이블 생성 가능 -> Foreignkey로 중간테이블의 이름을 지어줘야함.(안헷깔리게)
+        id.  content.  RetweetId
+        1                 null
+        2                  1
+        3                  1
+        4                  1
+        
